@@ -114,3 +114,8 @@ React, Tailwind (Frontend)
 Spring Boot, Java (Backend)
 
 MySQL/PostgreSQL (Database)
+
+## 🎥 Project Demonstration
+
+Watch the full demo video here:  
+https://youtu.be/IA9cXWSPh5o
