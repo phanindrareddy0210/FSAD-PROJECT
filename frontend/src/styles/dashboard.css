@@ -1,0 +1,141 @@
+.dashboard-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+.dashboard-container {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.dashboard-container h1 {
+  font-size: 32px;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.dashboard-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.dashboard-info {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.dashboard-info p {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.appointment-list {
+  margin-top: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.appointment-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.appointment-card:hover {
+  transform: translateY(-3px);
+}
+
+.appointment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.confirmation-code {
+  background: #e0f7fa;
+  color: #006064;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.appointment-details p {
+  font-size: 15px;
+  color: #444;
+  margin: 8px 0;
+}
+
+.appointment-details p strong {
+  color: #2e7d32;
+}
+
+.dashboard-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.action-button {
+  background: #4caf50;
+  color: white;
+}
+
+.action-button:hover {
+  background: #388e3c;
+  transform: translateY(-2px);
+}
+
+.logout-button {
+  background: #f44336;
+}
+
+.logout-button:hover {
+  background: #d32f2f;
+}
+
+/* Scrollbar Styling for Appointment List */
+.appointment-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.appointment-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.appointment-list::-webkit-scrollbar-thumb {
+  background: #4caf50;
+  border-radius: 10px;
+}
+
+.appointment-list::-webkit-scrollbar-thumb:hover {
+  background: #388e3c;
+}

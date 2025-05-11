@@ -1,0 +1,288 @@
+.appointment-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 600px;
+}
+
+.appointment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.doctor-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 16px;
+}
+
+.header-content {
+  flex: 1;
+}
+
+.header-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.speciality {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+.status-indicator {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-indicator[data-status="Pending"] {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-indicator[data-status="Confirmed"] {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-indicator[data-status="Cancelled"] {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-indicator[data-status="Rescheduled"] {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.card-details {
+  padding: 16px;
+  border-top: 1px solid #eee;
+}
+
+.detail-row {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.detail-label {
+  width: 100px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.detail-value {
+  flex: 1;
+  color: #2c3e50;
+}
+
+.notes-section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.notes-label {
+  color: #6c757d;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.notes-content {
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.action-button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-button.reschedule {
+  background: #4a90e2;
+  color: white;
+}
+
+.action-button.cancel {
+  background: #dc3545;
+  color: white;
+}
+
+.action-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.modal-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.confirm-button, .cancel-button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.confirm-button {
+  background: #28a745;
+  color: white;
+}
+
+.cancel-button {
+  background: #6c757d;
+  color: white;
+}
+
+.success-message {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #28a745;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  animation: slideUp 0.3s ease;
+}
+
+.cancelled {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.cancelled .cancelled-content {
+  text-align: center;
+  padding: 24px;
+}
+
+.undo-button {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.expand-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointment-card {
+    margin: 12px;
+  }
+
+  .doctor-image {
+    width: 48px;
+    height: 48px;
+  }
+
+  .header-content h3 {
+    font-size: 1rem;
+  }
+
+  .detail-label {
+    width: 80px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+}
